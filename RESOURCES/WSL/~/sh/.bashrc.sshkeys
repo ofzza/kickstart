@@ -1,0 +1,18 @@
+#!bin/bash
+# Copy SSH keys from Windows on startup
+# -------------------------------------------------------
+
+# Windows SSH content directory
+SSH_DIR="/mnt/e/.ssh"
+
+# Copy keys from windows
+rm ~/.ssh/*.key -f
+cp $SSH_DIR/*.key ~/.ssh
+rm ~/.ssh/*.pub -f
+cp $SSH_DIR/*.pub ~/.ssh
+#rm ~/.ssh/*.pem -f
+#cp $SSH_DIR/*.pem ~/.ssh
+
+# Update permissions
+chmod 400 ~/.ssh/*
+chmod 777 ~/.ssh/known_hosts

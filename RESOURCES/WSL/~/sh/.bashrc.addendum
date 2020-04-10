@@ -1,0 +1,37 @@
+#!bin/bash
+# Customzations on top of default ~/.bashrc file
+# ... copy the files here into the ~/ path and add the following to the end of your existing ~/.bashrc file
+#	
+#	# Add customizations
+#	if [ -f "$HOME/.bashrc.addendum" ]; then
+#		. $HOME/.bashrc.addendum
+#	fi
+#	
+#	
+# ---------------------------------------------------------------------------------------------------------
+
+
+# Set custom prompt
+if [ -f "$HOME/.bashrc.prompt" ]; then
+    . $HOME/.bashrc.prompt
+fi
+
+# Copy SSH keys from Windows on startup
+if [ -f "$HOME/.bashrc.sshkeys" ]; then
+    . $HOME/.bashrc.sshkeys
+fi
+
+# Update $PATH env variable
+if [ -f "$HOME/.bashrc.environment" ]; then
+    . $HOME/.bashrc.environment
+fi
+
+# Set some saine aliases
+if [ -f "$HOME/.bashrc.alias" ]; then
+    . $HOME/.bashrc.alias
+fi
+
+# Run docker daemon
+if [ -f "$HOME/.bashrc.dockerd" ]; then
+    . $HOME/.bashrc.dockerd
+fi

@@ -1,0 +1,15 @@
+#!bin/bash
+# Set custom prompt
+# -------------------------------------------------------
+
+RESET="\[\017\]"
+SMILEY=":)"
+FROWNY=":("
+parse_git_branch() {
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'
+}
+
+# export PS1='\u@\h'                                                                     # user@host
+# export PS1='$(p=$(parse_git_branch);((${#p}>0))&&echo $p)'                             # Current git branch (if present)
+# export PS1='$(p=${PWD/#"$HOME"/~};((${#p}>60))&&echo "${p::25}…${p:(-34)}"||echo "\w"' # Current directory (concatenate if needed)
+export PS1='\[\e[93m\]$(p=$(parse_git_branch);((${#p}>0))&&echo "[$p] ")\[\e[92m\]$(p=${PWD/#"$HOME"/~};((${#p}>60))&&echo "${p::25}…${p:(-34)}"||echo "\w")\n\[\e[0m\]$ \[\e[0m\]'
