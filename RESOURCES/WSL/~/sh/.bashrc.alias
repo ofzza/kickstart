@@ -1,0 +1,5 @@
+#!bin/bash
+# Set aliases
+# -------------------------------------------------------
+
+alias ll='ls -lah --color=auto'

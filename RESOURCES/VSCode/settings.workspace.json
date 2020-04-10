@@ -1,0 +1,6 @@
+{
+  // Automatic import management
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": false
+  }
+}

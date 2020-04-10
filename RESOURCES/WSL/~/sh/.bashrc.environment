@@ -1,0 +1,25 @@
+#!bin/bash
+# Update environment
+# -------------------------------------------------------
+
+# Update to use deno if installed
+if [ -d "~/.deno/bin" ] 
+then
+  export PATH=/root/.deno/bin
+fi
+
+# .NET
+if command -v dotnet --info > /dev/null 2>&1; then
+  export PATH="/root/.dotnet:/root/.dotnet/tools:$PATH"
+fi
+
+# GO
+if command -v go version > /dev/null 2>&1; then
+  export PATH="$HOME/go/bin:/usr/local/go/bin:$PATH"
+fi
+
+# Update with path to chrome if installed
+if [ -d "/mnt/c/Program Files (x86)/Google/Chrome" ] 
+then
+  export CHROME_BIN='/mnt/c/Program Files (x86)/Google/Chrome/Application/chrome.exe'
+fi

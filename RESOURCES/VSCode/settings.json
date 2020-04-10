@@ -1,0 +1,198 @@
+{
+  // Font ligatures
+  "editor.fontLigatures": true,
+  "editor.fontFamily": "Fira Code, Consolas, 'Courier New', monospace, 'Segoe UI Emoji'",
+  "editor.fontSize": 13,
+
+  // File formatting
+  "editor.tabSize": 2,
+  "files.eol": "\n",
+  "files.insertFinalNewline": true,
+
+  // Exclude processing of build artifacts and such
+  "files.exclude": {
+    "node_modules/": true,
+    "logs/": true,
+    "dist/": false
+  },
+
+  // Disable auto imports
+  "javascript.updateImportsOnFileMove.enabled": "never",
+  "typescript.updateImportsOnFileMove.enabled": "never",
+  "typescript.suggest.autoImports": false,
+  "javascript.suggest.autoImports": false,
+
+  // Automatic import management
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": false
+  },
+  // Automatic formatting with Prettier
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "prettier.resolveGlobalModules": false,
+
+  // Default terminal
+  "terminal.integrated.defaultProfile.windows": "WSL1",
+
+  // EXTENSIONS:
+  // TODO Highlights extension configuration
+  "todohighlight.isEnable": true,
+  "todohighlight.isCaseSensitive": true,
+  "todohighlight.keywords": [
+    // #region / #endregion
+    {
+      "text": "#region",
+      "color": "#888",
+      "backgroundColor": "#444",
+      "overviewRulerColor": "rgba(255,189,42,0.8)",
+      "isWholeLine": true
+    },
+    {
+      "text": "#endregion",
+      "color": "#888",
+      "backgroundColor": "transparent",
+      "overviewRulerColor": "rgba(255,189,42,0.8)",
+      "isWholeLine": true
+    },
+    // Testing
+    {
+      "text": "\ndescribe(",
+      "color": "#afa",
+      "backgroundColor": "transparent",
+      "overviewRulerColor": "rgba(255,0,0,0.8)",
+      "isWholeLine": false
+    },
+    {
+      "text": " describe(",
+      "color": "#afa",
+      "backgroundColor": "transparent",
+      "overviewRulerColor": "rgba(255,0,0,0.8)",
+      "isWholeLine": false
+    },
+    {
+      "text": "\nit(",
+      "color": "#afa",
+      "backgroundColor": "transparent",
+      "overviewRulerColor": "rgba(255,0,0,0.8)",
+      "isWholeLine": false
+    },
+    {
+      "text": " it(",
+      "color": "#afa",
+      "backgroundColor": "transparent",
+      "overviewRulerColor": "rgba(255,0,0,0.8)",
+      "isWholeLine": false
+    },
+    {
+      "text": " expect(",
+      "color": "#afa",
+      "backgroundColor": "transparent",
+      "overviewRulerColor": "rgba(255,0,0,0.8)",
+      "isWholeLine": false
+    },
+    {
+      "text": " assert<",
+      "color": "#afa",
+      "backgroundColor": "transparent",
+      "overviewRulerColor": "rgba(255,0,0,0.8)",
+      "isWholeLine": false
+    },
+    {
+      "text": " assert(",
+      "color": "#afa",
+      "backgroundColor": "transparent",
+      "overviewRulerColor": "rgba(255,0,0,0.8)",
+      "isWholeLine": false
+    },
+    {
+      "text": " refute<",
+      "color": "#afa",
+      "backgroundColor": "transparent",
+      "overviewRulerColor": "rgba(255,0,0,0.8)",
+      "isWholeLine": false
+    },
+    {
+      "text": " refute(",
+      "color": "#afa",
+      "backgroundColor": "transparent",
+      "overviewRulerColor": "rgba(255,0,0,0.8)",
+      "isWholeLine": false
+    },
+    // Tagging
+    {
+      "text": "DEBUG:",
+      "color": "#fff",
+      "backgroundColor": "#ff0000",
+      "overviewRulerColor": "rgba(255,0,0,0.8)",
+      "isWholeLine": false
+    },
+    {
+      "text": "!DEBUG",
+      "color": "#fff",
+      "backgroundColor": "#ff0000",
+      "overviewRulerColor": "rgba(255,0,0,0.8)",
+      "isWholeLine": true
+    },
+    {
+      "text": "TODO:",
+      "color": "#fff",
+      "backgroundColor": "#ffbd2a",
+      "overviewRulerColor": "rgba(255,189,42,0.8)",
+      "isWholeLine": false
+    },
+    {
+      "text": "!TODO",
+      "color": "#fff",
+      "backgroundColor": "#ffbd2a",
+      "overviewRulerColor": "rgba(255,189,42,0.8)",
+      "isWholeLine": true
+    },
+    {
+      "text": "FIXME:",
+      "color": "#fff",
+      "backgroundColor": "#f06292",
+      "overviewRulerColor": "rgba(255,189,42,0.8)",
+      "isWholeLine": false
+    },
+    {
+      "text": "!FIXME",
+      "color": "#fff",
+      "backgroundColor": "#f06292",
+      "overviewRulerColor": "rgba(255,189,42,0.8)",
+      "isWholeLine": true
+    },
+    {
+      "text": "DOCS:",
+      "color": "#fff",
+      "backgroundColor": "#2196f3",
+      "overviewRulerColor": "#ffeb3b",
+      "isWholeLine": false
+    },
+    {
+      "text": "!DOCS",
+      "color": "#fff",
+      "backgroundColor": "#2196f3",
+      "overviewRulerColor": "#ffeb3b",
+      "isWholeLine": true
+    },
+    {
+      "text": "NOTE:",
+      "color": "#fff",
+      "backgroundColor": "#76bbf3",
+      "overviewRulerColor": "#ffeb3b",
+      "isWholeLine": false
+    },
+    {
+      "text": "!NOTE",
+      "color": "#fff",
+      "backgroundColor": "#76bbf3",
+      "overviewRulerColor": "#ffeb3b",
+      "isWholeLine": true
+    }
+  ],
+  "todohighlight.defaultStyle": {
+    "isWholeLine": false
+  },
+  // Code spell checker extension configuration
+  "cSpell.words": ["region", "endregion"]
+}
